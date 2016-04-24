@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>高次幂去模 | 灵柩里的人</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="几个概念
+同余$a$、$b$ 为整数，$m$ 为正整数，若 $m$ 整除 $a-b$ 就说 $a$ 模 $m$ 同余 $b$ ，用  $a\equiv b\pmod m$表示。此时，$a\equiv b\pmod n$ 等价于 $a\mod m =b\mod m$ 。还可以这么说：$a=b+km$
+
+最大公约数和最小公倍数$a、b$ 为不全为 $0$ 的两个整数，能使 $d\ |\ a和d\ |\">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高次幂去模">
+<meta property="og:url" content="http://coffin5257.xyz/high-power-mod/index.html">
+<meta property="og:site_name" content="灵柩里的人">
+<meta property="og:description" content="几个概念
+同余$a$、$b$ 为整数，$m$ 为正整数，若 $m$ 整除 $a-b$ 就说 $a$ 模 $m$ 同余 $b$ ，用  $a\equiv b\pmod m$表示。此时，$a\equiv b\pmod n$ 等价于 $a\mod m =b\mod m$ 。还可以这么说：$a=b+km$
+
+最大公约数和最小公倍数$a、b$ 为不全为 $0$ 的两个整数，能使 $d\ |\ a和d\ |\">
+<meta property="og:updated_time" content="2016-04-24T07:30:53.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="高次幂去模">
+<meta name="twitter:description" content="几个概念
+同余$a$、$b$ 为整数，$m$ 为正整数，若 $m$ 整除 $a-b$ 就说 $a$ 模 $m$ 同余 $b$ ，用  $a\equiv b\pmod m$表示。此时，$a\equiv b\pmod n$ 等价于 $a\mod m =b\mod m$ 。还可以这么说：$a=b+km$
+
+最大公约数和最小公倍数$a、b$ 为不全为 $0$ 的两个整数，能使 $d\ |\ a和d\ |\">
+  
+    <link rel="alternative" href="/atom.xml" title="灵柩里的人" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="null" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">coffin5257</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Python 从入门 PY 交易</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/360/" style="font-size: 10px;">360</a> <a href="/tags/ISCC/" style="font-size: 10px;">ISCC</a> <a href="/tags/writeup/" style="font-size: 20px;">writeup</a> <a href="/tags/总结/" style="font-size: 10px;">总结</a> <a href="/tags/比赛/" style="font-size: 20px;">比赛</a> <a href="/tags/社工/" style="font-size: 10px;">社工</a> <a href="/tags/蛤蛤/" style="font-size: 10px;">蛤蛤</a> <a href="/tags/隐私/" style="font-size: 10px;">隐私</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://begin5257.github.io">Beginning</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">coffin5257</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="null" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">coffin5257</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Python 从入门 PY 交易</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-high-power-mod" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/high-power-mod/" class="article-date">
+  	<time datetime="2014-06-13T04:00:39.000Z" itemprop="datePublished">2014-06-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      高次幂去模
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/算法与数据结构/">算法与数据结构</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="几个概念"><a href="#几个概念" class="headerlink" title="几个概念"></a>几个概念</h2><ul>
+<li><p>同余<br>$a$、$b$ 为整数，$m$ 为正整数，若 $m$ 整除 $a-b$ 就说 $a$ 模 $m$ 同余 $b$ ，用  $a\equiv b\pmod m$表示。<br>此时，$a\equiv b\pmod n$ 等价于 $a\mod m =b\mod m$ 。<br>还可以这么说：$a=b+km$</p>
+</li>
+<li><p>最大公约数和最小公倍数<br>$a、b$ 为不全为 $0$ 的两个整数，能使 $d\ |\ a和d\ |\ b$ 的最大整数 $d$ 称为 $a和b$ 的最大公约数。用 $gcd(a,b)$ 表示。<br>正整数 $a$和$b$ 最小公倍数则是能被$a$和$b$整除的最小整数。用 $lcm(a,b)$ 表示。<br>且，$gcd(a,b)\cdot lcm(a,b)=ab$</p>
+<a id="more"></a>
+</li>
+</ul>
+<h2 id="求解同余幂"><a href="#求解同余幂" class="headerlink" title="求解同余幂"></a>求解同余幂</h2><p>如何有效地求解 $b^n\mod m$（$m\ge2、n\ge0、1\le b\le m$）?<br>当 $b,n,m$ 都是大整数时，先求 $b^n$ ，再求 $b^n$ 除以 $m$ 的余数，这显然是不可行的。</p>
+<p>先介绍一个公式：</p>
+<p>$a\cdot b \mod m=((a \mod m)\cdot(b \mod m))\mod m$</p>
+<p>首先，我们遇到的问题就是，如何求解在精度和效率的要求下求解 $b^n$<br>那么，有一种可行的方法是利用指数 $n$ 的二进制展开：$n=(a_{k-1}\cdots a_1a_0)_2$。</p>
+<p>$!b^n=b^{a_{k-1}\cdot 2^{k-1}+\cdots+a_1\cdot2+a<em>0}=b^{a</em>{k-1}\cdot2^{k-1}}\cdots b^{a_1\cdot2}\cdot b^{a_0}$</p>
+<p>为了计算 $b^n$ ，我们要先计算 $b,b^2,(b^2)^2=b^4,(b^4)^2=b^8,\cdots,b^{2^k}$,再把 $a_j=1$（二进制位为1）的那些项乘起来，就得到了 $b^n$ 。</p>
+<p>比如我们要算 $3^{11}$，先把 11 转化为二进制：$11=(1011)_2$，因此<br>$!3^{11}=3^{8+2+1}=3^83^23^1=6561\cdot9\cdot3=177147$</p>
+<p>那么求解 $b^n\mod m$ 的方法就是，依次求 $b\mod m$，$b^2\mod m$，$b^4\mod m$，$\cdots$，$b^{2^{k-1}}\mod m$，把其中 $a_j=1$（二进制位为1） 的那些项 $b^{2^j} \mod m$ 乘起来，每次乘法后再 $\mod m$ 。</p>
+<hr>
+<p><strong>上面一段没看懂的看这里：</strong><br>假设按照二进制的方法得到： $b^n=a\cdot b\cdot c\cdot d$<br>那我们就把 $a\mod m、b\mod m、c\mod m、d\mod m$ 求出来，开始推了：<br>$(a\mod m)\cdot (b\mod m) \mod m = ab \mod m$<br>$(ab \mod m)\cdot (c\mod m) \mod m = abc \mod m$<br>$(abc \mod m)\cdot (d\mod m) \mod m = abcd \mod m$</p>
+<hr>
+<p><strong>举个栗子</strong></p>
+<p>求 $3^{644} \mod 625$</p>
+<hr>
+<p>$(644)_2= 1010000100$<br>$x=b^n \mod m$<br>$i:0$ to $k-1$</p>
+<p>步骤：<br>初始 $x=b^0 \mod 625=1$，$power=3 \mod 645=3$，power的作用是实时更新 $b^n$的因子</p>
+<p>$i=0,a_0=0,x=1,power=3^2 \mod 645=9 \mod 645=9$;<br>$i=1,a_1=0,x=1,power=9^2 \mod 645=81 \mod 645=81$;<br>$i=2,a_1=1,x=1 \cdot 81 \mod 645=81,power=81^2 \mod 645=6561 \mod 645=111$;<br>$i=3,a_3=0,x=81,power=111^2 \mod 645=12321 \mod 645=66$;<br>$i=4,a_1=0,x=81,power=66^2 \mod 645=4356 \mod 645=486$;<br>$i=5,a_1=0,x=81,power=486^2 \mod 645=236196 \mod 645=126$;<br>$i=6,a_1=0,x=81,power=126^2 \mod 645=15876 \mod 645=396$;<br>$i=7,a_1=1,x=(81 \cdot 396)\mod 645=471,power=396^2 \mod 645=156816 \mod 645=81$;<br>$i=8,a_1=0,x=471,power=81^2 \mod 645=6561 \mod 645=111$;<br>$i=9,a_1=1,x=(471 \cdot 111) \mod 645=6561 \mod 645=36$;</p>
+<hr>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><pre><code>// C语言实现
+int high_power_mod(int b,int n,int m){
+    if(n==0) return 1%m;
+    if(n==1) return b%m;
+    int result=1;
+    int power=b;
+    while(n&amp;gt;0){
+        if(n &amp;amp; 1==1){
+            result = (result*power) % m;
+        }
+        power = (power*power) % m;
+        n &amp;gt;&amp;gt;= 1;
+    }
+    return result;
+}`&lt;/pre&gt;
+
+## 递归方法
+
+在我们这种情况下（$1\le b\lt m$），下面这个式子是成立的：
+
+$b^n \mod m$
+$=b \cdot b^{n-1} \mod m$
+$=((b \mod m)\cdot(b^{n-1} \mod m))\mod m$
+$=(b \cdot(b^{n-1} \mod m)) \mod m$
+
+结合一下我们的初始设定 $b^0 \mod m=1$，很容易就想到利用递归求解了。
+
+&lt;pre&gt;`int high_power_mod(int b,int n,int m){
+    if(n==0){
+        return 1;
+    }
+    int result = mod(b,n-1,m);
+    return b*result%m;
+}`&lt;/pre&gt;
+
+这个算法的复杂度应该是 O(n)，n 就是幂次。
+
+## 改进
+
+其实，还有一个式子也是成立的：
+$a^b \mod m=(a \mod m)^b \mod m$
+
+那么利用这个式子，就可以把递归次数减少了：
+$b^n \mod m=(b^{n/2} \mod m)^2 \mod m$
+
+实现的时候要注意：
+**当 n 为奇数时，最后一次要再乘一个 b 。**
+
+代码：
+
+&lt;pre&gt;`int high_power_mod(int b,int n,int m){
+    if(n==0){
+        return 1;
+    }
+    int result = high_power_mod(b,n/2,m);
+    if(n%2)
+        return b*result*result%m;
+    else
+        return result*result%m;
+}`&lt;/pre&gt;
+
+同理，不用递归也是可以的：
+
+&lt;pre&gt;`int high_power_mod(int b,int n,int m){
+    if(n==0) return 1%m;
+    if(n==1) return b%m;
+    int result=1;
+    int power=b;
+    while(n){
+        if(n%2)
+            result=result*b%m;
+        b = b*b%m;
+        n /= 2;
+    }
+    return result;
+}
+</code></pre>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/iscc-2014-writeup/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          ISCC 2014 Writeup
+        
+      </div>
+    </a>
+  
+  
+    <a href="/something-about-gfw/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">谈谈最近的 GFW</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="high-power-mod" data-title="高次幂去模" data-url="http://coffin5257.xyz/high-power-mod/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"coffin5257"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 coffin5257
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-46994891-4', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
